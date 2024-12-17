@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textbiru {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <!-- <a v-bind:href="url">google</a> -->
+        <a :href="url">google</a>
+        <br>
+        <h2>user</h2>
+        <div :class="selectedClass">
+            name: {{ user.name }}
+        </div>
+        <div>
+            <img :src="user.image" :style="{width: responsiveWidth}" :alt="'image of ' + user.name" :title="'image of ' + user.name">
+        </div>
+    </div>
+
+<script type="module">
+  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  createApp({
+    data() {
+      return {
+        url: 'https://google.com',
+        user: {
+            name: 'meg',
+            image: 'https://images.unsplash.com/photo-1731945573953-ef1edae2c558?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        },
+        responsiveWidth: '400px',
+        selectedClass: 'textbiru'
+      }
+    }
+  }).mount('#app')
+</script>
+
+</body>
+</html>
