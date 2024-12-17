@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        {{ message }}
+    </div>
+
+    <div v-text="message"></div>
+
+    <div v-text="message2">
+        ini adalah random text
+    </div>
+    
+    <div v-html="message3">
+        ini random text
+    </div>
+
+<script type="module">
+  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+  createApp({
+    data() {
+      return {
+         message: 'hello world',
+         message2: 'ini akan mereplace text',
+         message3: '<strong>ini tulisan bold</strong>'
+      }
+    }
+  }).mount('#app')
+</script>
+
+</body>
+</html>
