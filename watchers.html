@@ -15,17 +15,17 @@
             <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
                 <form action="" @submit.prevent="" class="w-50">
                     <div>
-                        <label for="username" class="form-control">username</label>
+                        <label for="username" class="form-label">username</label>
                         <input type="text" name="" id="username" class="form-control" v-model="username">
                         <label for="username" class="text-danger fw-bold" v-if="usernameError">minimal username 8 karakter</label>
                     </div>
                     <div>
-                        <label for="password" class="form-control">password</label>
+                        <label for="password" class="form-label">password</label>
                         <input type="password" name="" id="password" class="form-control" v-model="password">
                         <label for="password" class="text-danger fw-bold" v-if="passwordError">minimal password 8 karakter</label>
                     </div>
                     <div>
-                        <label for="passwordRetype" class="form-control">retype password</label>
+                        <label for="passwordRetype" class="form-label">retype password</label>
                         <input type="password" name="" id="passwordRetype" class="form-control" v-model="passwordRetype">
                         <label for="passwordRetype" class="text-danger fw-bold" v-if="passwordRetypeError">password retype tidak sama dengan password</label>
                     </div>
